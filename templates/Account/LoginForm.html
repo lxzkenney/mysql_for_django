@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>Login</title>
+<link rel="stylesheet" href='/static/css/common.css' />
+</head>
+<body>
+	<div class='login'>
+		<fieldset>
+			<legend>登录</legend>
+			<form id='form' method='post' action='/admin/loginform/' >
+				{% csrf_token %}
+				<table>
+				{{model.as_table}}
+				</table>
+				<p><label>&nbsp;</label><input type='submit' value='提交' /> <span class='wrong'>{{ LoginStatus }}</span> </p>
+			</form>
+		</fieldset>
+	</div>
+	<script src='/static/js/jquery-1.8.2.js' ></script>
+	<script src='/static/js/kenney.js' ></script>
+	<script>
+		$(function(){
+			//$.validate('#form');
+		})
+	</script>
+</body>
+</html>

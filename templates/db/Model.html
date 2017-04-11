@@ -1,0 +1,29 @@
+{% extends  'Layout/Master.html'%}
+
+{% block content %}
+
+<style type="text/css">
+div.bt
+{
+position:absolute;
+left:350px;
+top:150px
+}
+
+</style>
+
+<hr />
+<div class='bt1'>
+<table>
+<tr><td>IP</td><td>PORT</td><td>VERSION</td><td>BUFFER</td></tr>
+{% for item in names %}
+
+<tr><td>{{ item.ip }}</td><td>{{ item.port }}</td><td>{{ item.ver }}</td><td>{{ item.buffer }}</td></tr>
+
+{% endfor %}
+
+</table>
+
+</div>
+<hr />
+{% endblock%}

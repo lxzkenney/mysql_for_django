@@ -1,0 +1,16 @@
+eclipse.preferences.version=1
+encoding//app01/forms/AccountForm.py=utf-8
+encoding//app01/models.py=utf-8
+encoding//app01/views/AccountView.py=utf-8
+encoding//app01/views/HomeView.py=utf-8
+encoding//templates/Account/Login.html=UTF-8
+encoding//templates/Home/Index.html=UTF-8
+encoding//templates/Home/UserDetail.html=UTF-8
+encoding//templates/Home/UserList.html=UTF-8
+encoding//templates/Home/manage.html=UTF-8
+encoding//web/Extensions/HtmlHelper.py=utf-8
+encoding//web/forms/AccountForm.py=utf-8
+encoding//web/views.py=utf-8
+encoding//web/views/AccountView.py=utf-8
+encoding//web/views/HomeView.py=utf-8
+encoding/<project>=UTF-8

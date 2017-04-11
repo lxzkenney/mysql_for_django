@@ -1,0 +1,62 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<title></title>
+	<link rel="stylesheet" href='/static/css/common.css' />
+	{% block css %} {% endblock%}
+</head>
+<body>
+
+	<div class='pg-title'>
+		<ul>
+			<li>运维自动化管理平台</li>
+		</ul>
+	</div>
+	
+	<div class='pg-body'>
+		<div class='body-menu'>
+
+			<div>
+				<div class="menu-title">数据库管理</div>
+				<div class="menu-body">
+					<a href="/admin/manage/">数据库安装</a>
+					<a href="/admin/iplist/">数据库列表</a>
+					<a href="/admin/backup/">数据库备份</a>
+				</div>
+			</div>
+
+			<div>
+				<div class="menu-title">权限管理</div>
+				<div class="menu-body  hide">
+				<a href="/admin/userlist/">用户管理</a>
+				</div>
+			</div>
+			
+			<div>
+				<div class="menu-title">运维工作</div>
+				<div class="menu-body hide">
+					<a href="/admin/runcmd/">执行命令</a>
+
+				</div>
+			</div>
+
+		</div>
+		
+		<div class='body-content'>
+			{% block content %} {% endblock%}
+		</div>
+	</div>
+	
+	<div></div>
+	<script type="text/javascript" src='/static/js/jquery-1.8.2.js'></script>
+	{% block javascript %} {% endblock%}
+	<script type="text/javascript">
+		$(function(){
+			$('.menu-title').click(function(){
+				$(this).parent().siblings().children('.menu-body').addClass('hide');
+				$(this).next().removeClass('hide');
+			});
+		});
+	</script>
+</body>
+</html>

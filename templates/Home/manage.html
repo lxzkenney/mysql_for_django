@@ -1,0 +1,23 @@
+{% extends  'Layout/Master.html'%}
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+{% block content %}
+<h2> Mysql Install</h2>
+
+<form method='post' action='/admin/install/'>
+
+  机器信息：<br />
+ remoteip: &nbsp;<input type='text' name='lip' /><br />
+ username: <input type='text' name='lusername' /><br />
+ password:&nbsp; <input type='password' name='lpassword' /><br />
+ port: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='text' name='lport' /><br />
+ <br />
+ 数据库实例信息：<br />
+ ip:&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<input type='text' name='ip' /><br />
+ ver:&nbsp;&nbsp;&nbsp;&nbsp; <input type='text' name='version' /><br />
+ port:&nbsp;&nbsp; <input type='text' name='port' /><br />
+ buffer:<input type='text' name='buffer' /><br />
+ <br />
+ <input type='submit' value='提交' />
+</form>
+{% endblock%}

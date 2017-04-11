@@ -1,0 +1,44 @@
+{% extends  'Layout/Master.html'%}
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<script type="text/javascript" src='/static/js/jquery-1.8.2.js'></script>
+<script type="text/javascript" src='/static/js/jquery-1.8.2.min.js'></script>
+
+{% block content %}
+
+<style type="text/css">
+#tdiv {background-color: gray; padding: 20px;}
+
+
+
+</style>
+
+<form id='form' method='post' action='/admin/cmdresult/' >
+<select name='select1'>
+{% for item in names %}
+<option value ="{{ item.ip }}">{{ item.ip }}</option>
+<br />
+{% endfor %}
+</select>
+<br />
+
+<input type='input' name='cmdinput' value='输入命令' /><br />
+<input type='submit' value='执行' />
+</form>
+
+
+<hr />
+<div id="tdiv">
+
+
+{{key1}}
+
+
+</div>
+<script type="text/javascript">
+str = {{key1}},
+html = $.parseHTML(str),
+$log.append( html );
+</script>
+
+
+{% endblock%}
