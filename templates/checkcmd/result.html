@@ -1,15 +1,12 @@
 {% extends  'Layout/Master.html'%}
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-<script type="text/javascript" src='/static/js/jquery-1.8.2.js'></script>
-<script type="text/javascript" src='/static/js/jquery-1.8.2.min.js'></script>
+
 
 {% block content %}
 
 <style type="text/css">
 #tdiv {background-color: gray; padding: 20px;}
-
-
-
+textarea  {background-color:black;height:500px; width:600px;color:white;}
 </style>
 
 <form id='form' method='post' action='/admin/cmdresult/' >
@@ -27,17 +24,22 @@
 
 
 <hr />
-<div id="tdiv">
+<div id="tdiv11">
 
+
+<textarea >
 
 {{key1}}
 
+</textarea>
+
 
 </div>
-<script type="text/javascript">
-str = {{key1}},
-html = $.parseHTML(str),
-$log.append( html );
+
+<script type="text/javascript" src='http://libs.baidu.com/jquery/1.9.0/jquery.js'>
+
+var content = {{key1}};
+$('div#tdiv').html(content);
 </script>
 
 

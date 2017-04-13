@@ -1,3 +1,4 @@
+#coding:utf-8
 from django.shortcuts import render, render_to_response
 from django.http  import HttpResponse
 import json
@@ -6,7 +7,9 @@ import sys,datetime,time
 import paramiko
 from web import models
 from web.models import ipauth
-
+from setuptools.package_index import htmldecode
+import HTMLParser
+html_parser = HTMLParser.HTMLParser()
 
 
 
@@ -41,13 +44,15 @@ def cmdresult(request):
     cmd=lcmd
     ip_list=[]
     info=[]
+
     
     ssh=paramiko.SSHClient() 
     ssh.load_system_host_keys() 
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy()) 
     ssh.connect(hostname=hostname,username=username,password=password,port=int(port)) 
     stdin1,stdout1,stderr1=ssh.exec_command(cmd,timeout=10)
-    info=stdout1.read().replace('\n','\n\t')
+    info=stdout1.read()
+#    info=html_parser.unescape(info)
     ssh.close()
     
     tt=models.ipauth.objects.all()

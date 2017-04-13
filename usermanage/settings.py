@@ -66,7 +66,7 @@ DATABASES = {
         'NAME':'lixingzhou',
         'USER':'kenney',
         'PASSWORD':'123456',
-        'HOST':'192.168.39.210',
+        'HOST':'192.168.39.207',
         'PORT':'3307',
     }
 }

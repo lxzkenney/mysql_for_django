@@ -1,1 +1,0 @@
-# mysql_for_django

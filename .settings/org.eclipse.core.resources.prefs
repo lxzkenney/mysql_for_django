@@ -13,4 +13,5 @@ encoding//web/forms/AccountForm.py=utf-8
 encoding//web/views.py=utf-8
 encoding//web/views/AccountView.py=utf-8
 encoding//web/views/HomeView.py=utf-8
+encoding//web/views/runcmd.py=utf-8
 encoding/<project>=UTF-8

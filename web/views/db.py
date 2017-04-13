@@ -77,3 +77,8 @@ def autobackup(request):
     return render_to_response('db/backup.html',{'key':"mysql backup suceess!",'bkinfo':backinfo,'names':iplist})
 
 
+
+
+
+
+
